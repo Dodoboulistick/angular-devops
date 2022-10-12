@@ -28,14 +28,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-      - run: npm ci
-      - run: npm run build
-      - run: npm run deploy
+    - uses: actions/checkout@v3
+    - name: Deploying
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@1.3.2
+      with:
+        github_access_token: ${{ secrets.ACCESS_TOKEN }}
+        build_configuration: production
+        base_href: ./
+        deploy_branch: dist
+        angular_dist_build_folder: dist
