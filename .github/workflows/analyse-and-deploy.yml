@@ -30,7 +30,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Deploying
+    - name: Deplying on # https://dodoboulistick.github.io/angular-devops/
       uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
       with:
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
