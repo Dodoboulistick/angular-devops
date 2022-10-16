@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { format } from 'date-fns';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'hello-world';
-  markdown: string = '';
 
-  constructor() {}
+  constructor() {
+    this.getNextPause();
+  }
 
   public multiplyFunction(a: number, b: number): number {
     return a * b;
+  }
+
+  public getNextPause() {
+    let now = new Date().getSeconds();
+    console.log(now);
   }
 }
