@@ -17,6 +17,12 @@ export class AppComponent {
     this.countdown();
   }
 
+  /**
+   *
+   * @param a first number to multiply
+   * @param b second number to multiply
+   * @returns multiplication of a and b
+   */
   public multiplyFunction(a: number, b: number): number {
     return a * b;
   }
