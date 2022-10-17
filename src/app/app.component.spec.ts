@@ -8,12 +8,6 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('hello-world');
   });
 
-  test(`markdown variable is initialised and empty`, async () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.markdown).toEqual('');
-  });
-
   test(`multiplyFunction is working (useless but we need tests)`, async () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
