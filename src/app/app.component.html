@@ -1,6 +1,11 @@
-<div class="lg:w-3/5 mx-auto">
-  <h1 class="text-3xl font-bold mt-20">Hey 👋 Temps avant la prochaine pause :</h1>
-  <h2 class="my-3">As a gift, here is a small markdown live editor (hope you'll enjoy it) :</h2>
-  <div class="grid grid-cols-2 gap-10">
-  </div>
+<div class="flex place-content-center h-screen w-screen items-center">
+  <h1 *ngIf="isBusinessDay; else notBusinessDay" class="text-3xl font-semibold block text-center w-fit">Hey 👋 Temps
+    avant la prochaine
+    pause :<br />
+    <span class="text-7xl font-bold block mt-10">{{timer}}</span>
+  </h1>
+  <ng-template #notBusinessDay>
+    <h1 #elseBlock class="text-7xl font-bold block text-center w-fit">Hey, bon weekend! 👋<br />
+    </h1>
+  </ng-template>
 </div>
